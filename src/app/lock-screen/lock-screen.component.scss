@@ -1,0 +1,25 @@
+.background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    .card {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        width: 400px;
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        .play-button{
+            flex-shrink: 1;
+            min-width: 200px;
+            padding:5px 10px;
+        }
+    }
+}

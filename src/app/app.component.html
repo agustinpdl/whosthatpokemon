@@ -1,0 +1,8 @@
+<app-lock-screen></app-lock-screen>
+<div class="game-container">
+  <div class="img-container">
+    <div class="counter">{{counter}}</div>
+    <img [src]="pokeImg" [class.blacked]="!solved" class="pokemon-image">
+  </div>
+  <input type=" text" class="user-text" res id="name" [(ngModel)]="userText" />
+</div>
