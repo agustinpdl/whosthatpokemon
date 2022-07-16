@@ -13,7 +13,7 @@ export class AppComponent {
   public solved: boolean = false;
   public counter: number = 0;
   public set userText(s: string) {
-    if (s == this.pokemon?.name) {
+    if (s.toLowerCase() == this.pokemon?.name) {
       this._correctPokemon();
       this._userText = '';
       return;
