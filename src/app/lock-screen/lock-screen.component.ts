@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-lock-screen',
   templateUrl: './lock-screen.component.html',
@@ -8,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LockScreenComponent implements OnInit {
   public locked: boolean = true;
   @Input() public firstTime: boolean = true;
+  @Output() public readonly startGame: EventEmitter<void> = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
@@ -15,5 +15,6 @@ export class LockScreenComponent implements OnInit {
   start(): void {
     this.locked = false;
     this.firstTime = false;
+    this.startGame.emit();
   }
 }

@@ -5,12 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LockScreenComponent } from './lock-screen/lock-screen.component';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-    LockScreenComponent
-  ],
+    LockScreenComponent,
+      TimerComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
